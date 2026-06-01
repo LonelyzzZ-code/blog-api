@@ -1,0 +1,18 @@
+  E:\blog-api\
+  ├── requirements.txt
+  ├── app\
+  │   ├── __init__.py
+  │   ├── main.py           ← 入口
+  │   ├── config.py         ← 配置
+  │   ├── database.py       ← 数据库连接
+  │   ├── redis.py          ← Redis（可选）
+  │   ├── models\（数据表）
+  │   │   ├── article.py    ← 文章表
+  │   │   └── comment.py    ← 评论表
+  │   ├── schemas\（接口）
+  │   │   ├── article.py    ← 文章数据格式
+  │   │   └── comment.py    ← 评论数据格式
+  │   └── routers\
+  │       ├── articles.py   ← 文章 CRUD
+  │       ├── comments.py   ← 评论 + 点赞
+  │       └── stats.py      ← 访问量统计

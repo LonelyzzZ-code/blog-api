@@ -1,0 +1,11 @@
+#核心框架
+fastapi
+uvicorn
+
+#数据库
+sqlalchemy
+pydantic
+
+#其他
+redis
+python-dotenv
