@@ -25,4 +25,5 @@ class ArticleResponse(BaseModel):
     created_at: datetime
     updated_at: datetime
     comment_count: int = 0 
-    class Config:        from_attributes = True
+    class Config:
+        from_attributes = True

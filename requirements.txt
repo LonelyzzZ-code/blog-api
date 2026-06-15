@@ -5,6 +5,7 @@ uvicorn
 #数据库
 sqlalchemy
 pydantic
+pydantic-settings
 
 #其他
 redis

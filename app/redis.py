@@ -52,11 +52,11 @@ def incr_view(article_id:int)->int:
     if redis_client is None:
         return 0
     try:
-        return redis_client.incr(f"article:view :{article_id}")#.incr(key)传入key时key会自动加一，并入写入数据
+        return redis_client.incr(f"article:view:{article_id}")#.incr(key)传入key时key会自动加一，并入写入数据
     except Exception:
         return 0
     
-def get_view(article_id: int)->int|None:
+def get_views(article_id: int) -> int | None:
     """
     获取某篇文章的访问量
     返回None表示Redis没数据
@@ -64,6 +64,7 @@ def get_view(article_id: int)->int|None:
     if redis_client is None:
         return None
     try:
-        val = redis_client.get(f"article:view :{article_id}")
+        val = redis_client.get(f"article:view:{article_id}")
+        return int(val) if val else None
     except Exception:
         return None

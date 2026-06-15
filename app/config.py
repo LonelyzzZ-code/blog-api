@@ -6,7 +6,8 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     DATABASE_URL: str #BaseSettings类会根据名字自动在env中索取地址，不需要填
     REDIS_URL:str | None = None #| None就是对REDIS_URL做空值判断，如果没有就直接跳过
-    APP_TITLE:str = "0.1.0"
+    APP_TITLE: str = "Blog API"
+    APP_VERSION: str = "0.1.0"
     SECRET_KEY:str = "change-me"
 
     class Config:

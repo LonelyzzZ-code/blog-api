@@ -18,7 +18,7 @@ class Article(Base):
     #创建时间
     created_at = Column(DateTime,server_default = func.now())
     #更新时间
-    update_at = Column(DateTime,server_default = func.now(),onupdate = func.now())#onupdate自动更新,当这行数据被修改时，自动修改为等号后的数值
+    updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())#onupdate自动更新,当这行数据被修改时，自动修改为等号后的数值
 
     # ===================== 关联关系 =====================
 

@@ -32,7 +32,7 @@ def list_articles(
             .all()
         )
         return {
-            "items": items,
+            "items": [ArticleResponse.model_validate(item) for item in items],
             "total": total,
             "page": page,
             "page_size": page_size,
